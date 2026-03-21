@@ -1,0 +1,32 @@
+:root {
+  /* 🎵 Colores principales */
+  --color-bg: #0f0f1a;
+  --color-surface: #1a1a2e;
+  --color-primary: #7c4dff;
+  --color-secondary: #00e5ff;
+  --color-accent: #ff2e63;
+
+  /* Texto */
+  --color-text: #ffffff;
+  --color-text-muted: #a0a0b2;
+
+  /* Estados */
+  --color-hover: #2a2a40;
+  --color-border: #2f2f45;
+
+  /* Tipografía */
+  --font-main: 'Inter', sans-serif;
+
+  /* Espaciado */
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+
+  /* Bordes */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* Sombras */
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
