@@ -2,6 +2,8 @@ import { getSongs } from './data.js';
 import { renderSongs } from './ui.js';
 import { filterSongs } from './filter.js';
 import { playSong, pauseSong } from './player.js';
+import '../css/variables.css';
+import '../css/styles.css';
 
 document.addEventListener('DOMContentLoaded', async () => {
   const resultsContainer = document.getElementById('results');
