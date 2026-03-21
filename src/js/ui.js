@@ -1,6 +1,11 @@
 export const renderSongs = (songs, container) => {
   container.innerHTML = '';
 
+   if (songs.length === 0) {
+    container.innerHTML = `<p>No se encontraron resultados 🎧</p>`;
+    return;
+  }
+
   songs.forEach(song => {
     const card = document.createElement('div');
     card.classList.add('card');
