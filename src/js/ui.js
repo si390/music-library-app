@@ -1,3 +1,5 @@
+import { loadSong, playSong } from './player.js';
+
 export const renderSongs = (songs, container) => {
   container.innerHTML = '';
 
@@ -18,7 +20,8 @@ export const renderSongs = (songs, container) => {
 
     // Evento click (lo conectaremos al player luego)
     card.addEventListener('click', () => {
-      console.log('Seleccionaste:', song.title);
+      loadSong(song);
+      playSong(); // autoplay al hacer click
     });
 
     container.appendChild(card);
