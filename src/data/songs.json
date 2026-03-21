@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "Blinding Lights",
+    "artist": "The Weeknd",
+    "image": "https://i.scdn.co/image/ab67616d0000b2730c13c7c45c1c9a1c40b7c6c3",
+    "preview": "https://p.scdn.co/mp3-preview/sample1"
+  },
+  {
+    "id": 2,
+    "title": "Levitating",
+    "artist": "Dua Lipa",
+    "image": "https://i.scdn.co/image/ab67616d0000b273b4c6b9f7c5d6c9e7c5d6c9e7",
+    "preview": "https://p.scdn.co/mp3-preview/sample2"
+  },
+  {
+    "id": 3,
+    "title": "Peaches",
+    "artist": "Justin Bieber",
+    "image": "https://i.scdn.co/image/ab67616d0000b273c9d6c7c9d6c7c9d6c7c9d6c7",
+    "preview": "https://p.scdn.co/mp3-preview/sample3"
+  },
+  {
+    "id": 4,
+    "title": "Save Your Tears",
+    "artist": "The Weeknd",
+    "image": "https://i.scdn.co/image/ab67616d0000b273f0f0f0f0f0f0f0f0f0f0f0f0",
+    "preview": "https://p.scdn.co/mp3-preview/sample4"
+  },
+  {
+    "id": 5,
+    "title": "Stay",
+    "artist": "The Kid LAROI, Justin Bieber",
+    "image": "https://i.scdn.co/image/ab67616d0000b273e0e0e0e0e0e0e0e0e0e0e0e0",
+    "preview": "https://p.scdn.co/mp3-preview/sample5"
+  }
+]
