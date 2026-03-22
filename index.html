@@ -5,17 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Music Library App</title>
 
-  <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" />
 
-  <!-- Google Fonts (opcional pero recomendado) -->
+  
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div id="app">
 
-    <!-- 🔝 HEADER -->
+   
     <header class="header">
       <div class="logo">
         🎵 <span>MusicApp</span>
@@ -25,7 +24,7 @@
         <input 
           type="text" 
           id="searchInput" 
-          placeholder="Buscar canciones o artistas..."
+          placeholder="Search for songs or artists..."
         />
       </div>
 
@@ -34,35 +33,35 @@
       </div>
     </header>
 
-    <!-- 📚 MAIN CONTENT -->
+   
     <main class="main-content">
 
-      <!-- Sidebar -->
+      
       <aside class="sidebar">
         <nav>
           <ul>
-            <li class="active">Inicio</li>
-            <li>Explorar</li>
+            <li class="active">Home</li>
+            <li>Explore</li>
             <li>Playlists</li>
           </ul>
         </nav>
       </aside>
 
-      <!-- Content -->
+      
       <section class="content">
 
-        <!-- Results -->
+        
         <div id="results" class="results-grid">
-          <!-- JS renderiza canciones aquí -->
+          
         </div>
 
       </section>
     </main>
 
-    <!-- 🎧 PLAYER -->
+    
     <footer class="player" id="player">
       <div class="player-info">
-        <span id="songTitle">Ninguna canción seleccionada</span>
+        <span id="songTitle">No selected song</span>
       </div>
 
       <div class="player-controls">
@@ -73,7 +72,7 @@
 
   </div>
 
-  <!-- JS -->
+  
   <script type="module" src="/src/js/app.js"></script>
 </body>
 </html>

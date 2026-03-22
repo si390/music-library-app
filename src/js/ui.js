@@ -9,7 +9,7 @@ export const renderSongs = (songs, container) => {
   container.innerHTML = '';
 
    if (songs.length === 0) {
-    container.innerHTML = `<p>No se encontraron resultados 🎧</p>`;
+    container.innerHTML = `<p>No results🎧</p>`;
     return;
   }
 
@@ -31,7 +31,7 @@ export const renderSongs = (songs, container) => {
     const favBtn = card.querySelector('.fav-btn');
 
   favBtn.addEventListener('click', (e) => {
-    e.stopPropagation(); // evitar activar el player
+    e.stopPropagation(); 
 
     if (isFavorite(song.id)) {
       removeFavorite(song.id);
@@ -42,10 +42,10 @@ export const renderSongs = (songs, container) => {
     }
   });
 
-    // Evento click (lo conectaremos al player luego)
+    
     card.addEventListener('click', () => {
       loadSong(song);
-      playSong(); // autoplay al hacer click
+      playSong(); 
     });
 
     container.appendChild(card);

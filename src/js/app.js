@@ -3,6 +3,7 @@ import { renderSongs } from './ui.js';
 import { filterSongs } from './filter.js';
 import { playSong, pauseSong } from './player.js';
 import { getFavorites } from './storage.js';
+import { searchSongs } from './api.js';
 import '../css/variables.css';
 import '../css/styles.css';
 
@@ -14,21 +15,23 @@ document.addEventListener('DOMContentLoaded', async () => {
   const pauseBtn = document.getElementById('pauseBtn');
   const favoritesBtn = document.getElementById('favoritesBtn');
   const songs = await getSongs();
+  let timeout;
 
-  // Render inicial
+
   renderSongs(songs, resultsContainer);
 
-  // 🔎 Evento de búsqueda en tiempo real
-  searchInput.addEventListener('input', (e) => {
+  
+  searchInput.addEventListener('input', async (e) => {
+    clearTimeout(timeout);
     const query = e.target.value;
 
-    const source = showingFavorites ? getFavorites() : songs;
-    const filteredSongs = filterSongs(source, query);
+    if (query.length < 2) return;
 
-    renderSongs(filteredSongs, resultsContainer);
+    const songs = await searchSongs(query);
+    renderSongs(songs, resultsContainer);
   });
 
-   // 🎧 Controles del player
+   
   playBtn.addEventListener('click', playSong);
   pauseBtn.addEventListener('click', pauseSong);
   favoritesBtn.addEventListener('click', () => {
@@ -37,7 +40,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (showingFavorites) {
       const favorites = getFavorites();
       renderSongs(favorites, resultsContainer);
-      favoritesBtn.textContent = '🏠'; // volver a inicio
+      favoritesBtn.textContent = '🏠'; 
     } else {
       renderSongs(songs, resultsContainer);
       favoritesBtn.textContent = '❤️';

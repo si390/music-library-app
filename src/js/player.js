@@ -10,7 +10,7 @@ export const loadSong = (song) => {
     audio.src = '';
   }
 
-  // Actualizar UI
+  
   document.getElementById('songTitle').textContent = `${song.title} - ${song.artist}`;
 };
 
