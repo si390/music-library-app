@@ -159,6 +159,27 @@ body {
   background: var(--color-accent);
   transform: scale(1.1);
 }
+.card-image {
+  position: relative;
+}
+
+.fav-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0,0,0,0.6);
+  border: none;
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.fav-btn:hover {
+  transform: scale(1.2);
+}
+
 
 @media (max-width: 768px) {
 
