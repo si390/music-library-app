@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   renderSongs(songs, resultsContainer);
 
+  resultsContainer.innerHTML = "<p>Searching for music... 🎧</p>";
   
   searchInput.addEventListener('input', async (e) => {
     clearTimeout(timeout);

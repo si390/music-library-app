@@ -8,6 +8,7 @@ export const loadSong = (song) => {
     audio.src = song.preview;
   } else {
     audio.src = '';
+    alert('This song doesn\'t have an available preview 😢');
   }
 
   

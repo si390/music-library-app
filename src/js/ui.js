@@ -23,6 +23,7 @@ export const renderSongs = (songs, container) => {
       <button class="fav-btn">
         ${isFavorite(song.id) ? '❤️' : '🤍'}
       </button>
+      ${!song.preview ? '<span class="no-preview">No preview</span>' : ''}
     </div>
     <h4>${song.title}</h4>
     <p>${song.artist}</p>
