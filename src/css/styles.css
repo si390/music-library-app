@@ -133,18 +133,16 @@ body {
 }
 
 .player-controls button {
-  background: var(--color-primary);
-  border: none;
-  color: white;
+  font-size: 20px;
   padding: 10px;
-  margin: 0 5px;
   border-radius: 50%;
+  background: var(--color-accent);
+  border: none;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .player-controls button:hover {
-  background: var(--color-accent);
   transform: scale(1.1);
 }
 .card-image {

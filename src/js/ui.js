@@ -14,6 +14,7 @@ export const renderSongs = (songs, container) => {
   }
 
   songs.forEach(song => {
+    console.log("SONG:",song);
     const card = document.createElement('div');
     card.classList.add('card');
 
@@ -23,7 +24,7 @@ export const renderSongs = (songs, container) => {
       <button class="fav-btn">
         ${isFavorite(song.id) ? '❤️' : '🤍'}
       </button>
-      ${!song.preview ? '<span class="no-preview">No preview</span>' : ''}
+      ${song.preview ? '' : '<span class="no-preview">No preview</span>'}
     </div>
     <h4>${song.title}</h4>
     <p>${song.artist}</p>
