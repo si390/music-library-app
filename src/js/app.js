@@ -1,5 +1,4 @@
 import { renderSongs } from './ui.js';
-import { playSong, pauseSong } from './player.js';
 import { getFavorites } from './storage.js';
 import { searchSongs } from './api.js';
 import '../css/variables.css';

@@ -1,4 +1,4 @@
-import { loadSong, playSong } from './player.js';
+
 import { 
   addFavorite, 
   removeFavorite, 
@@ -24,11 +24,12 @@ export const renderSongs = (songs, container) => {
       <button class="fav-btn">
         ${isFavorite(song.id) ? '❤️' : '🤍'}
       </button>
-      ${song.preview ? '' : '<span class="no-preview">No preview</span>'}
     </div>
+
     <h4>${song.title}</h4>
     <p>${song.artist}</p>
-    `;
+
+`;
 
     const favBtn = card.querySelector('.fav-btn');
 
@@ -46,8 +47,11 @@ export const renderSongs = (songs, container) => {
 
     
     card.addEventListener('click', () => {
-      loadSong(song);
-      playSong(); 
+      const player = document.getElementById('spotifyPlayer');
+      const title = document.getElementById('songTitle');
+
+      player.src = `https://open.spotify.com/embed/track/${song.id}`;
+      title.textContent = `${song.title} - ${song.artist}`;
     });
 
     container.appendChild(card);

@@ -39,6 +39,6 @@ export const searchSongs = async (query) => {
     title: track.name,
     artist: track.artists.map(a => a.name).join(', '),
     image: track.album.images[0]?.url,
-    preview: track.preview_url
+    preview: track.preview_url ?? null
   }));
 };

@@ -15,11 +15,18 @@ export const saveFavorites = (favorites) => {
 export const addFavorite = (song) => {
   const favorites = getFavorites();
 
-  
   const exists = favorites.find(fav => fav.id === song.id);
   if (exists) return;
 
-  favorites.push(song);
+  const normalizedSong = {
+    id: song.id,
+    title: song.title,
+    artist: song.artist,
+    image: song.image,
+    preview: song.preview ?? null
+  };
+
+  favorites.push(normalizedSong);
   saveFavorites(favorites);
 };
 

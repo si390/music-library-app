@@ -5,7 +5,7 @@ const playPauseBtn = document.getElementById('playPauseBtn');
 
 export const loadSong = (song) => {
   currentSong = song;
-
+  const preview = song.preview ?? null;
   if (!song.preview) {
     audio.pause();
     audio.src = '';
